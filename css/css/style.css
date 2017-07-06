@@ -125,12 +125,43 @@
     margin-top: 20px;
     max-width: 400px;
 }
+/*Le ponemos la propieda display: valor Flex que hace que la caja sea flexible y le ponemos felx-wrap wrap que hace que cuando las cajas que contiene no encajen las desplace abajo, y justify-content space-around hace que le de unos margenes automaticos a cada caja que contiene*/
+.section-content-hogar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.content-donar-caja{
+    padding: 5px;
+    width: 250px;
+    background-color: #979af1;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 35px
+}
+.content-donar-caja>img{
+    width: 100%;
+}
+.content-donar-caja>div{
+    display: flex;
+    padding: 5px 15px 5px 15px;
+}
+.content-donar-caja>div>h2{
+    font-size: 1em;
+    padding-right: 10px;
+    border-right: 1px solid black;
+}
+.content-donar-caja>div>h2:last-child{
+    padding-left: 10px;
+     border-right: none;
+}
 .foot-menu {
     background-color: #f1f1f1;
     text-align: center;
     padding-top: 5%;
     padding-bottom: 5%;
 }
+/* Aqui le agregamos un tamaño de letra 1.7em que ya habiamos mensionado que es el tamaño de punto de la pantalla que equivale por defecto a 16px entonces 1em = 16px, le agregamos un margin y padding para separar los elementos. Con el border left 1px solid black le pone una line en la izquierda de un pixel solido*/
 .foot-menu > a {
 
   font-size: 1.7em;
@@ -140,6 +171,7 @@
   text-decoration: none;
   color: black;
 }
+/* Al ultimo hijo le quitamos el border para que quede igual todo */
 .foot-menu > a:first-child{
     border-left: none;
     background-color: darkblue;
