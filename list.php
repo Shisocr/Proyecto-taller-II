@@ -18,11 +18,12 @@
           <img src="https://image.ibb.co/k3aB2a/Captura_de_pantalla_2017_05_25_a_las_8_15_36_p_m.png" alt=""/>
         </a>
       </div>
-      <div class="nav-menu">
-        <a href="index.html"> Inicio </a>
-        <a href="donar.html"> Quiero donar</a>
-        <a href=""> Dar Hogar</a>
-        <a href="register.html"> Registrarse</a>
+     <div style= font-family:arial class="nav-menu">
+        <a style= "color:#fff" href="index.html"> Inicio </a>
+        <a style= "color:#fff" href="donar.html"> Quiero donar</a>
+        <a style= "color:#fff" href="hogar.html"> Dar Hogar</a>
+        <a style= "color:#fff" href="register.html"> Registrarse</a>
+      </div>
 <!--Creamos una etiqueta p que diga bienvenido y hacemos un echo con php de la vairable session con nombre name-->
 
         <p>Bienvenido, <?php echo $_SESSION['name'] ?></p>
@@ -64,11 +65,11 @@
     </div>
   </section>
   <footer>
-      <div class="foot-menu">
-        <a href="index.html"> Inicio </a>
-        <a href="donar.html"> Quiero donar</a>
-        <a href=""> Dar Hogar</a>
-        <a href="register.html"> Registrarse</a>
+     <div style= "background-color: darkblue;" class="foot-menu">
+        <a style= "color:#fff" href="index.html"> Inicio </a>
+        <a style= "color:#fff" href="donar.html"> Quiero donar</a>
+        <a style= "color:#fff" href="hogar.html"> Dar Hogar</a>
+        <a style= "color:#fff" href="register.html"> Registrarse</a>
       </div>
   </footer>   
 </body>
