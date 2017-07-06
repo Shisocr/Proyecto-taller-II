@@ -1,3 +1,5 @@
+//Iniciamos con un sesion_start() que no quiere decir que hayamos iniciado secion sino que si hay sesion la iniciara y si no hay pasara a un segundo plano hasta que se entre en esta pagina con sesion.
+
 <?php session_start();?>
    
     <!DOCTYPE html>
@@ -21,6 +23,8 @@
         <a href="donar.html"> Quiero donar</a>
         <a href=""> Dar Hogar</a>
         <a href="register.html"> Registrarse</a>
+<!--Creamos una etiqueta p que diga bienvenido y hacemos un echo con php de la vairable session con nombre name-->
+
         <p>Bienvenido, <?php echo $_SESSION['name'] ?></p>
       </div>
       <div class="clear"></div>
@@ -30,6 +34,8 @@
     <div class="section-content">
       <div class="section-content-form">
         <?php
+	//Aqui pedimos a la bbdd que nos traiga la informacion y en este casi le hacemos un fetchAll en el modo Array asociativo.
+
             include('php/core.php');
             $db = new PDOconnect;
             $query = $db->queryList("SELECT `ID`, `user_name`, `user_lastname`, `user_birthdate`, `user_sex`, `user_email`, `user_telephone`, `user_login`, `user_password`, `user_register` FROM `ia_users` ", array( ));
@@ -38,8 +44,9 @@
             
             ?>
             <table >
-	            <tbody>
-	            <?php 
+	            <tbody><!-- se crea el cuerpo de la tabla -->
+	            <?php //En esta sentencia for hacemos un bucle para que recorra result en cada nivel del array recordamos array(array(['clave']=>'valor',['clave']=>'valor'),array(['clave']=>'valor',['clave']=>'valor')); e incrementamos en cada vuelta que de.
+
                     for($i=0;$i<=$result[$i];$i++){
                         echo '<tr>
                                 <td>'.$result[$i]['ID'].'</td>
