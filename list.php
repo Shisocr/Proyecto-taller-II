@@ -26,7 +26,7 @@
       </div>
 <!--Creamos una etiqueta p que diga bienvenido y hacemos un echo con php de la vairable session con nombre name-->
 
-        <p>Bienvenido, <?php echo $_SESSION['name'] ?></p>
+        <p style= "color:#fff">Bienvenido, <?php echo $_SESSION['name'] ?></p>
       </div>
       <div class="clear"></div>
     </nav>
