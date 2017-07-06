@@ -1,0 +1,150 @@
+/* Le quita los margins y paddings que tienen por defecto a todo(*) antes, durante y despues de cual quier otro efecto */
+*:before, *, *:after {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+/* Le da a la clase nav-content un padding que va segun las agujas del reloj Arriba(5px) a la derecha(25px) abajo(5px) y a la izquierda(25px) */
+.nav-content {
+  padding: 5px 25px 5px 25px;
+  background-color: darkblue;
+}
+/* La caja con clase nav-logo que contiene la imagen es posicionada con un float left */
+.nav-logo {
+  float: left;
+}
+/* Especificamos una anchura a la imagen para que no sobre escale */
+.nav-logo > a > img {
+  width: 60px;
+}
+/* Ponemos el menu a la derecha con Float: right y hacemos un transform: translateY(100%) que y nos señala la posicion del eje en el plano cartesiano y lo bajamos con el porcentaje 100% o mas segun la posicion que necesitemos*/
+.nav-menu {
+  float: right;
+  transform: translateY(100%);
+}
+/* Agregamos estilos al menu en la etiqueta a, tamaño de fuente 1em que em es referencial los pixeles o puntos del web como base tenemos 16px(creo) y cojemos 1em = 16px, su uso en tipografias es mas frecuente por la facilidad que da al momento de darle un tamaño de letra a toda la web, y escalable a mobiles. Ademas tiene margin 15px a la derecha y un text-decoration: none para quitarle la linea cuando se posaba el mouse sobre el texto*/
+.nav-menu > a {
+  font-size: 1.1em;
+  margin-right: 15px;
+  text-decoration: none;
+  color: black;
+}
+/* En la caja con clase section-content le ponemos un tamaño maximo de 1200px que nos indica que esa caja crecera tanto como no sea 1200px y podra ser reducida tanto como sea posible porque no tiene una anchura fija ni un limite minimo sino un limite maximo. La propiedad margin auto sirve para que automaticamente le agrege los margenes corespondientes para que este centrado al porcentaje de la pantalla. Es una pagina para llevar acabo Responsive Design */
+.section-content {
+  margin: auto;
+  max-width: 1200px;
+  min-height: 80vh;
+  background-color: #fff;
+}
+/* En la caja con section-content-one sera el espaciado que le daremos entre contenedor y contenedor atraves de los paddings */
+.section-content-one,.section-content-two,.section-content-form,.section-content-three,.section-content-donar {
+  padding-top: 10%;
+  padding-bottom: 5%;
+}
+/* En esta linea le aplicamos un ancho de 500px a todas las cajas de etiquetas div que contenga section-content-one */
+.section-content-one > div,.section-content-two > div {
+  width: 500px;
+}
+/* Utilizamos la seudoclase (etiqueta):first-child para seleccionar la primera etiqueta div(en este caso) y le agregamos un posicionamiento relativo que se movera segun supadre, lo posicionamos a la izquierda con float:left y le hacemos un transform: translateY(150%) para ubicarlo segun donde lo necesitemos. para terminar aplicamos left: 120px que nos mueve la casa div con todo lo que contenga a 120px mas de la izquierda que tiene que seria 0. En este caso usamos posicionamiento relative que se movera segun su padre que es section-content-one y esta apegado a la izquierda y arriba del todo en los valores top:0 y left:0 al agregarle 120px left hace un efecto tipo padding sin agregar padding solo desplazando la caja hacia la derecha por el aumento que le dimos a su valor predeterminado 0px */
+.section-content-one > div:first-child {
+  position: relative;
+  float: left;
+  transform: translateY(150%);
+  left: 120px;
+}
+/* En este caso utilizamos la sudoclase (etiqueta):last-child que coje la ultima etiqueta p(en este caso) y lo movemos a la derecha con text-align porque recordamos que la etiqueta p es un elemento en bloque es decir ocupara tan ancho y grande sea el padre lo cual el padre tiene un tamaño de 500px la etiqueta p tiene un tamaño de 500px y variable al tamaño del padre. Se agrego un tamaño top 20px para separa un poco el primer elemento del segundo */
+.section-content-one > div:first-child > p:last-child {
+  margin-top: 20px;
+  text-align: right;
+}
+/* En este caso utilizamos la sudoclase (etiqueta):nth-child(nª) que coje la segunda etiqueta div(en este caso) que contiene la imagen y la posicionamos a la derecha */
+/* nª = numero de la posicion del elemento es decir si tenemos un div dentro tiene 5 etiquetas p y queremos modificar solo la numero 3 pondriamos con div>p:nth-child(3) */
+.section-content-one > div:nth-child(2) {
+  float: right;
+}
+
+.section-content-two > div:first-child{
+  position: relative;
+  left: 120px;
+}
+
+.section-content-two > div:nth-child(2){
+  float: right;
+  position: relative;
+  font-size: 1.5em;
+  top: -230px;
+}
+.section-content-form > form{
+  text-align: center;
+  margin: auto;
+  width: 300px;
+
+}
+.section-content-form > form > input{
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 15px;
+  width: 100%
+
+}
+.section-content-form > form > input:last-child{
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 15px;
+  width: 70%
+
+}
+.section-content-img{
+    display: flex;
+}
+.section-content-img>img{
+    width: 33.33%;
+    height: 50%;
+}
+.section-content-three{
+    text-align: center;
+}
+.section-content-three>p{
+    font-size: 1.5em;
+    margin-bottom: 40px;
+}   
+.section-content-three>a>img{
+    max-width: 400px;
+}
+.section-content-donar {
+    text-align: center;
+    
+    
+}
+.section-content-donar>p {
+    font-size: 1.5em;
+    padding-bottom: 30px;
+}
+.section-content-donar>img {
+    margin-top: 20px;
+    max-width: 400px;
+}
+.foot-menu {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.foot-menu > a {
+
+  font-size: 1.7em;
+  margin-right: 30px;
+  padding-left:  30px;
+  border-left: 1px solid black;
+  text-decoration: none;
+  color: black;
+}
+.foot-menu > a:first-child{
+    border-left: none;
+    background-color: darkblue;
+}
+/* El clear both sirve para que la etiqueta tome encuenta sus elemento que tiene dentro, al momento de utilizar el estilo position el contenedor piensa que no tiene elementos dentro y poniendose por defectos, con clear both hace que ese elemento padre no se ponga por defecto y que actue normal */
+.clear {
+  clear: both;
+}
