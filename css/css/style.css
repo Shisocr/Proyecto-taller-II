@@ -75,12 +75,14 @@
   font-size: 1.5em;
   top: -230px;
 }
+/*Aqui cojemos la case que dentro tiene un form y le damos una anchura de 300px y utilizamos la propiedad de margin auto para que este centrado con respecto a su caja dando margenes a los lados automaticamente*/
 .section-content-form > form{
   text-align: center;
   margin: auto;
   width: 300px;
 
 }
+/* Aqui cojemos la clase que dentro tiene un form y que dentro tiene input, entonces los estilos se aplicaran directo a los inputs que tenga. Lo alineamos al centro, y le agregamos un padding 5px, Ojo padding y margin, padding interno, margin externo. le agregamos un margin bottom de 15 px a todos los inputs y que tengan un tamaño de 100%*/
 .section-content-form > form > input{
   text-align: center;
   padding: 5px;
@@ -95,9 +97,11 @@
   width: 70%
 
 }
+/* Utilizamos display flex para hacer que todo encaje en la caja felxiblemente*/
 .section-content-img{
     display: flex;
 }
+/* Le agregamos una anchura de 33.33% que es equivalente al ancho del navegador por cada imagen, ejemplo adquirido analizando boortstrap y le agregamos un height 50% que recordamos estan tenidos en un div que la propiedad del div es adaptarse a sus elementos hijos y en este caso le garegamos a la imagen que mientras siempre haya imagenes le pongamos 50% */
 .section-content-img>img{
     width: 33.33%;
     height: 50%;
